@@ -1,5 +1,10 @@
 This project contains a set of react examples abd are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
+This particular example shows: 
+- how to use what we call functional components 
+- the use of props 
+- the use of props.children
+
 ## Available Scripts
 
 In the project directory, you can run:
