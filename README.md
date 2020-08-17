@@ -1,14 +1,12 @@
-## React Primer - Using State
+## React Primer -Two Way Binding
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
 This example shows how to use
 
-- useState hook
-- events and handlers
-- initialising state
-- modifying state
-- use of destructuring
+- two-way binding
+- passing reference of a handler from smart component to dummy component
+- firing the event handler from the dummy component and propagating its result to smart component
 
 ## Available Scripts
 

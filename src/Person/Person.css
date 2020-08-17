@@ -1,3 +1,10 @@
+.Person {
+  border: 1px solid #09f;
+  padding: 2em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
 p:hover {
   border: 1px solid #09f;
 }

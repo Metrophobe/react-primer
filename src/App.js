@@ -12,8 +12,16 @@ function App() {
     { name: "Harry", age: 26 },
   ]);
 
+  let nameChangeHandler = (event) => {
+    setPersons([
+      { name: event.target.value, age: 27 },
+      { name: "Dick", age: 28 },
+      { name: "Harry", age: 26 },
+    ]);
+  };
+
   let switchHandler = () => {
-    if (state === true) {
+    if (state) {
       setPersons([
         { name: "Jones", age: 27 },
         { name: "Dastardly", age: 28 },
@@ -39,6 +47,7 @@ function App() {
           click={switchHandler}
           name={persons[0].name}
           age={persons[0].age}
+          change={nameChangeHandler}
         ></Person>
         <Person name={persons[1].name} age={persons[2].age}></Person>
         <Person name={persons[2].name} age={persons[2].age}></Person>
