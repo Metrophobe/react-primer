@@ -1,12 +1,20 @@
-## React Primer -Two Way Binding
+## React Primer - Revision 1
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
-This example shows how to use
+This example revisits
 
-- two-way binding
-- passing reference of a handler from smart component to dummy component
-- firing the event handler from the dummy component and propagating its result to smart component
+- Creating TWO components: UserInput and UserOutput
+- UserInput holds an input element,
+- UserOutput two paragraphs
+- Output multiple UserOutput components in the App component
+- Passing a username to UserOutput via props and display it there
+- Add state to the App component (=> the username) and pass the username to the UserOutput component
+- Add a method to manipulate the state (=> an event-handler method)
+- Pass event-handler method reference to the UserInput component and binding it to onChange
+- new input entered by the user overwrites the old username passed to UserOutput
+- Two-way-binding to input (in UserInput) to also display the starting username
+- CSS styling
 
 ## Available Scripts
 
