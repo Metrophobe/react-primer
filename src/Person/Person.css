@@ -3,6 +3,7 @@
   padding: 2em;
   margin: 0.5em;
   cursor: pointer;
+  transition: all 1000ms ease-in-out;
 }
 
 p:hover {
