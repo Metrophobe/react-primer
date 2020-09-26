@@ -32,7 +32,7 @@ function App() {
     setPersons(newPersons);
   };
 
-  //This handler is firing instantly and is not waiting for click
+  //This handler is used to delete a person 
   let deletePersonHandler = (personIndex) => {
     const newPersons = [...persons];
     newPersons.splice(personIndex, 1);
