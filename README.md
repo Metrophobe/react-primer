@@ -1,4 +1,4 @@
-## React Primer - Conditional Rendering of Content (with Separate Logic)
+## React Primer - Revision 2)
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
@@ -8,8 +8,8 @@ This example shows how to use
 - passing reference of a handler from smart component to dummy component
 - firing the event handler from the dummy component and propagating its result to smart component
 - example of using map
-- CRUD functionality for all individual list items
-- Proper use of State
+- Deleting an item based on the index
+- Proper use of State hooks 
 - Use of inline anonymous arrow functions inside events (customizing paramters passed to handlers)
 
 ## Available Scripts
