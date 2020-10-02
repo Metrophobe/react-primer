@@ -25,7 +25,7 @@ const removeMe = (i) => {
 
 //pre-render 
 let characters = text.split('').map((c,i) => {
-  return <Char delete={() => {removeMe(i)}} key={i} id={i} char={c}/>
+  return <Char delete={() => removeMe(i)} key={i} id={i} char={c}/>
 });
 
 //render
