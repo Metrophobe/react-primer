@@ -4,6 +4,7 @@ This project contains a set of react examples and are all created using [Create 
 
 This example shows how to use
 
+- Functional Components as opposed Class-Based Components 
 - Two-way binding
 - passing reference of a handler from smart component to dummy component
 - firing the event handler from the dummy component and propagating its result to smart component
