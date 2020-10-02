@@ -1,110 +1,46 @@
 import React, { useState } from "react";
-import Person from "./Person/Person";
+import Validation from "./Validation/Validation";
+import Char from "./Char/Char";
+
 import "./App.css";
 
+
 function App() {
-  let [visible, setVisible] = useState(false);
 
-  let [person, setPerson] = useState({
-    name: "name",
-    age: 0,
-  });
+//hooks
+const [length, setLength] = useState(0);
+const [text, setText] = useState('');
 
-  let [persons, setPersons] = useState([
-    { name: "Tom", age: 27 },
-    { name: "Dick", age: 28 },
-    { name: "Harry", age: 26 },
-  ]);
+//event handlers
+const textmon = (e) =>{
+  setLength(e.target.value.length);
+  setText(e.target.value);
+}
 
-  let showHideHandler = () => {
-    setVisible(!visible);
-  };
+const removeMe = (i) => {
+  let tmp = text.split('');
+  tmp.splice(i,1);
+  setText(tmp.join(''));
+}
 
-  let addPersonHandler = () => {
-    const newPersons = [...persons];
-    newPersons.push(person);
-    setPersons(newPersons);
-  };
+//pre-render 
+let characters = text.split('').map((c,i) => {
+  return <Char delete={() => {removeMe(i)}} key={i} id={i} char={c}/>
+});
 
-  let editPersonHandler = (e, personIndex) => {
-    const newPersons = [...persons];
-    persons[personIndex].name = e.target.value;
-    setPersons(newPersons);
-  };
-
-  //This handler is used to delete a person 
-  let deletePersonHandler = (personIndex) => {
-    const newPersons = [...persons];
-    newPersons.splice(personIndex, 1);
-    setPersons(newPersons);
-  };
-
-  //Adding new Person
-  let setNewNameHandler = (e) => {
-    setPerson({
-      name: e.target.value,
-      age: person.age,
-    });
-  };
-
-  let setNewAgeHandler = (e) => {
-    setPerson({
-      name: person.name,
-      age: e.target.value,
-    });
-  };
-
-  //Pre-process before render
-
-  let personsOutput = null;
-
-  if (visible) {
-    personsOutput = (
-      <div>
-        {persons.map((p, index) => (
-          <Person
-            key={index}
-            id={index}
-            click={showHideHandler}
-            delete={deletePersonHandler}
-            change={editPersonHandler}
-            name={p.name}
-            age={p.age}
-          ></Person>
-        ))}
-      </div>
-    );
-  }
-
+//render
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React Introduction</h1>
-        <h3> Persons Held in Collection {persons.length}</h3>
-        <div>
-          <label> Name </label>
-          <input
-            type="text"
-            placeholder="name"
-            onChange={setNewNameHandler}
-            value={person.name}
-          />
-          <label> Age </label>
-          <input
-            type="text"
-            placeholder="age"
-            onChange={setNewAgeHandler}
-            value={person.age}
-          />
-          &nbsp;
-          <button onClick={addPersonHandler}>Add Person</button>
-        </div>
-        <br />
-        <button onClick={showHideHandler}> Toggle Persons</button>
-        {personsOutput}
-      </header>
+    <div>
+      <h1>Revision 2</h1>
+      <h2>Please enter some text </h2>
+      <textarea id='text' onChange={textmon} value={text}></textarea>
+      <br/>
+      <h2>Validation</h2>
+      <Validation length={length}></Validation>
+      <h2>Characters</h2>
+      {characters}
     </div>
-  );
+    );
 }
 
 export default App;
