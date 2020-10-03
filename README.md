@@ -8,9 +8,9 @@ This example shows how to use
 - ComponentDidCatch (currently no hook exists for functional components)
 - Using (old) state 
 - throwing an error ... 
+## Note
 
-## Note 
-- to see the Error Boundary in action you need to build a production build (to disable react debugging)
+to see the Error Boundary in action you need to build a production build (to disable react debugging)
 
 ## Available Scripts
 

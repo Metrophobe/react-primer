@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const title = document.title = "Example 8 - Conditional Styling";
+const title = document.title = "Example 9 - Exception Handling Using ErrorBoundary";
 
 ReactDOM.render(
   <React.StrictMode>
