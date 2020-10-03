@@ -1,15 +1,16 @@
-## React Primer - Ex8 Conditional Styling)
+## React Primer - Ex9 Exception Handling)
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
 This example shows how to use
 
-- Functional Components as opposed Class-Based Components 
-- Conditional CSS styling of classes
-- Use of pseudo selector within css file (note a common practice in jsx is to have inline styles coded through js). This has performance implications and should not be implemented in this manner since CSS has its own preprocessor, hence stick to external css. There are third party libraries that will make your life a bit easier but they all come with their pros and cons.  Radium seems to be a popular one. 
-- Use of a common handler for more than one component 
-- example of using switch
-- Invoking event handlers and accessing 'e' without the use of an anonymous function 
+- Excption Handling through ErrorBoundary
+- ComponentDidCatch (currently no hook exists for functional components)
+- Using (old) state 
+- throwing an error ... 
+
+## Note 
+- to see the Error Boundary in action you need to build a production build (to disable react debugging)
 
 ## Available Scripts
 

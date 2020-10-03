@@ -1,6 +1,5 @@
-
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import ErrorBounday from './ErrorBoundary/ErrorBoundary';
 
 export default (props) => {
 
@@ -19,11 +18,17 @@ export default (props) => {
       case "green":
         green === "" ? setGreen('green'):setGreen("");
         break;  
+      default:
+        break;
     }
   }
   
+  if(Math.random()>0.7){
+    throw new Error("Something's wrong");  
+  }
 
   return( 
+  <ErrorBounday>
   <div>
     <h1>{props.title}</h1>
     <p>Click on the buttons to change the state</p>
@@ -31,6 +36,7 @@ export default (props) => {
     <button id="orange" className={orange} onClick={colorHandler}>Orange</button>
     <button id="green" className={green} onClick={colorHandler}>Green</button>
   </div>
+  </ErrorBounday>
   );
 }
 
