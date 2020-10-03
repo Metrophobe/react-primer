@@ -1,46 +1,37 @@
-import React, { useState } from "react";
-import Validation from "./Validation/Validation";
-import Char from "./Char/Char";
 
-import "./App.css";
+import React, { useState } from 'react'
 
 
-function App() {
+export default (props) => {
 
-//hooks
-const [length, setLength] = useState(0);
-const [text, setText] = useState('');
+  const [red, setRed] = useState("");  
+  const [green, setGreen] = useState("");
+  const [orange, setOrange] = useState("");
 
-//event handlers
-const textmon = (e) =>{
-  setLength(e.target.value.length);
-  setText(e.target.value);
+  const colorHandler = (e) => {
+    switch(e.target.id){
+      case "red":
+        red === "" ? setRed('red'):setRed("");
+        break;
+      case "orange":
+        orange === "" ? setOrange('orange'):setOrange("");
+        break;
+      case "green":
+        green === "" ? setGreen('green'):setGreen("");
+        break;  
+    }
+  }
+  
+
+  return( 
+  <div>
+    <h1>{props.title}</h1>
+    <p>Click on the buttons to change the state</p>
+    <button autofocus id="red" className={red} onClick={colorHandler}>Red</button>
+    <button id="orange" className={orange} onClick={colorHandler}>Orange</button>
+    <button id="green" className={green} onClick={colorHandler}>Green</button>
+  </div>
+  );
 }
 
-const removeMe = (i) => {
-  let tmp = text.split('');
-  tmp.splice(i,1);
-  setText(tmp.join(''));
-}
 
-//pre-render 
-let characters = text.split('').map((c,i) => {
-  return <Char delete={() => removeMe(i)} key={i} id={i} char={c}/>
-});
-
-//render
-  return (
-    <div>
-      <h1>Revision 2</h1>
-      <h2>Please enter some text </h2>
-      <textarea id='text' onChange={textmon} value={text}></textarea>
-      <br/>
-      <h2>Validation</h2>
-      <Validation length={length}></Validation>
-      <h2>Characters</h2>
-      {characters}
-    </div>
-    );
-}
-
-export default App;

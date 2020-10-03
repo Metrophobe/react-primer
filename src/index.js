@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const title = document.title = "Example 8 - Conditional Styling";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App title={title} />
   </React.StrictMode>,
   document.getElementById('root')
 );

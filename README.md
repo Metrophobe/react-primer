@@ -1,17 +1,15 @@
-## React Primer - Revision 2)
+## React Primer - Ex8 Conditional Styling)
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
 This example shows how to use
 
 - Functional Components as opposed Class-Based Components 
-- Two-way binding
-- passing reference of a handler from smart component to dummy component
-- firing the event handler from the dummy component and propagating its result to smart component
-- example of using map
-- Deleting an item based on the index
-- Proper use of State hooks 
-- Use of inline anonymous arrow functions inside events (customizing paramters passed to handlers)
+- Conditional CSS styling of classes
+- Use of pseudo selector within css file (note a common practice in jsx is to have inline styles coded through js). This has performance implications and should not be implemented in this manner since CSS has its own preprocessor, hence stick to external css. There are third party libraries that will make your life a bit easier but they all come with their pros and cons.  Radium seems to be a popular one. 
+- Use of a common handler for more than one component 
+- example of using switch
+- Invoking event handlers and accessing 'e' without the use of an anonymous function 
 
 ## Available Scripts
 
