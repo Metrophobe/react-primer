@@ -1,0 +1,20 @@
+.Cell{
+    color:black;
+    background-color: #EEE;
+    vertical-align: middle;
+    transition: 0.5s ease-in-out;
+}
+
+.Cell span , .Cell input {
+  font-size:1em;
+  width:97%;
+}
+
+.Cell input:focus{
+  outline: none;
+  transition: 0.2s ease-in-out;
+  padding:0.3vmin;
+}
+
+
+

@@ -1,48 +1,12 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Century Gothic", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:#001122;
-  padding:3vmin;
-  font-size: 3em;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-h1,h2,h3,h4,h5,h6{
-  color:#09f;
+body{
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
 
-button{
-  color:white;
-  background-color:#001122;
-  padding:0.5em;
-  margin:0.5em;
-  font-weight: 100;
-  font-size: 0.5em;
-  transition: ease-in-out 0.1s;
-  width:130px;
-  text-align:center;
-}
-
-.red:hover{     
-  background-color: red;
-}
-
-.green:hover{
-  background-color: green;
-}
-
-.orange:hover{
-  background-color: orange;
-}
-
-button:hover{
-  font-weight: 900;
-  cursor: pointer;
-}
-
-p{
-  color:white;
+h1{
   font-weight: 100;
 }
+

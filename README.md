@@ -1,16 +1,17 @@
-## React Primer - Ex9 Exception Handling)
+## React Primer - Ex10 - Components and Life Cycle Methods and Hooks
 
 This project contains a set of react examples and are all created using [Create React App](https://github.com/facebook/create-react-app). Each example is set in a different branch so that you can review them separately with the root branch being a simple empty application. This read me will be updated accordingly when new examples are added. Cheers.
 
 This example shows how to use
 
-- Excption Handling through ErrorBoundary
-- ComponentDidCatch (currently no hook exists for functional components)
-- Using (old) state 
-- throwing an error ... 
-## Note
+- Component Subdivision and Seperation of Concerns 
+- Life Cycle Methods in a Class Component 
+- UseEffect hook ... 
+- PureComponent 
+- React.memo() 
 
-to see the Error Boundary in action you need to build a production build (to disable react debugging)
+## Note
+Strict Mode causes Double Renders to happen (can be Removed from App component)
 
 ## Available Scripts
 
